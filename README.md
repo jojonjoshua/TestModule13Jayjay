@@ -21,6 +21,8 @@ Terdapat 3 folder untuk project Test 13 jayjay tersebut yang terdiri dari:
   ![image](https://github.com/jojonjoshua/TestModule13Jayjay/assets/133229159/214ed992-20be-4f4b-89f2-15b4e2efbb04)
   ![image](https://github.com/jojonjoshua/TestModule13Jayjay/assets/133229159/37eecaba-480e-42f4-ab18-85a866df14d0)
 
+  oia min untuk koreksi saya tidak pernah tau dari awal kalau misalnya memberikan link github harus mengisi README dsbnya, jadinya kalau memang harus diisi tolong diberi tahu di tugasnya atau gimana caranya biar tidak jadi memakan waktu pengerjannya ya. sekian koreksi dari saya, terima kasih
+
 
 
 
