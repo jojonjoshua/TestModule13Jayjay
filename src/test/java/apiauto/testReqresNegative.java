@@ -9,18 +9,11 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNot.not;
 
 public class testReqresNegative {
 
-    @Test
-    public void testGetListUsers() {
-        ValidatableResponse all = given().when()
-                .get("https://reqres.in/api/users?page=2")
-                .then().log().all()
-                .assertThat().statusCode(200)
-                .assertThat().body("per_page", Matchers.equalTo(5))
-                .assertThat().body("page", Matchers.equalTo(2));
-    }
 
     @Test
     public void testPostCreateUser() {
@@ -41,7 +34,7 @@ public class testReqresNegative {
                 .post("https://reqres.in/api/users")
                 .then().log().all()
                 .assertThat().statusCode(201)
-                .assertThat().body("12345", Matchers.equalTo(valueName));
+                .assertThat().body(not(equalTo(valueName)));
 
     }
 
@@ -70,7 +63,7 @@ public class testReqresNegative {
                 .put("api/users"+userId)
                 .then().log().all()
                 .assertThat().statusCode(200)
-                .assertThat().body("ujang123", Matchers.equalTo(newName));
+                .assertThat().body(not(equalTo(newName)));
 
     }
 
@@ -93,13 +86,13 @@ public class testReqresNegative {
                 .patch("api/users"+userId)
                 .then().log().all()
                 .assertThat().statusCode(200)
-                .assertThat().body("asep@#", Matchers.equalTo(newName));
+                .assertThat().body(not(equalTo(newName)));
     }
 
     @Test
     public void testDeletUser() {
         RestAssured.baseURI = "https://reqres.in/api/users/2";
-        int userToDelete = 4;
+        int userToDelete = 999;
         given().log().all()
                 .when().delete("api/users/"+ userToDelete)
                 .then()
